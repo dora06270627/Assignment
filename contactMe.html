@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Form</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link id ="pagestyle" rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body class="bgContact" onload ="setStyleSheet()">
+<script src="main.js"></script>
+<div id="wrapper">
+	<div id = "main">
+		<nav id = "nav-wrap">
+			<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+			<a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+			<ul id="nav" class="nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutMe.html">About Me</a></li>
+				<li><a href="https://www.linkedin.com/in/donghan-dora-fan-601528112" target="_blank">Linkedin</a></li>
+				<li><a href="contactMe.html">Contact Me</a></li>
+			</ul>
+
+			<div id="map"></div>
+			<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ21OH32wqAx9pFY8FWbZtM80nZnRgpcc&callback=initMap">
+			</script>
+		</nav>
+
+	<div class="flex-box2">
+		<div class="flex-item2">Contact Me
+			<form id="contactForm" action="" onsubmit="return validateForm()" method="get">
+			<p><label for="name">Name：</label>
+				<input id="name" name="name" tabindex="1" type="text" onkeypress="checkLetter()"></p>
+			<p><label for="email">Email：</label>
+				<input id="email" name="email" tabindex="2" type="text"></p>
+			<p><label for="comment">Your Message:</label></p>
+			<p><textarea id="comment" name="comment" rows="10" cols="30"></textarea></p>
+	    	<p><input name="submit" id="submit" value="Send Message" type="submit" class="button"></p>
+		</form>
+		</div>
+
+
+	</div>
+</div>
+
+</div>
+
+<footer>
+	<div id="footer">
+		<div class = "container">
+			<div id="copyright">
+				<ul>
+					<li>&copy;Donghan Fan</li>
+					<li>Contact information: <a href="mailto:fan.d@husky.neu.edu">fan.d@husky.neu.edu</a></li>
+					<li><button onclick="swapStyleSheet('stylesheet.css')">Style Black</button>
+						<button onclick="swapStyleSheet('stylesheet2.css')">Style Yellow</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+</body>
+</html>

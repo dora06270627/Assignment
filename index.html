@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Donghan Fan</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link id ="pagestyle" rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+
+<body  onload ="setStyleSheet();checkCookie()">
+
+<div id="wrapper">
+    <div id = "main">
+        <nav id = "nav-wrap">
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="https://www.linkedin.com/in/donghan-dora-fan-601528112" target="_blank">Linkedin</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <div class="banner">
+            <div class="banner-text">
+                <h1 class="headline">Donghan Fan</h1>
+
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="carousel-container">
+        <div class="mySlides fade"><img src="P1.JPG"></div>
+        <div class="mySlides fade"><img src="Me_1.jpg"></div>
+        <div class="mySlides fade"><img src="Me_3.jpg"></div>
+        <div class="mySlides fade"><img src="Me_4.JPG"></div>
+        <a class="prev" onclick="plusDivs(-1)"><i  class="fa fa-5x fa-angle-left"></i></a>
+        <a class="next" onclick="plusDivs(1)"><i class="fa fa-5x fa-angle-right"></i></a>
+
+    </div>
+
+    <div style="text-align: center">
+        <span class="dot" onclick="showDivs(1)"></span>
+        <span class="dot" onclick="showDivs(2)"></span>
+        <span class="dot" onclick="showDivs(3)"></span>
+        <span class="dot" onclick="showDivs(4)" ></span>
+    </div>
+
+
+</div>
+
+<footer>
+    <div id="footer">
+        <div class = "container">
+            <div id="copyright">
+                <ul>
+                    <li>&copy;Donghan Fan</li>
+                    <li>Contact information: <a href="mailto:fan.d@husky.neu.edu">fan.d@husky.neu.edu</a></li>
+                    <li><button onclick="swapStyleSheet('stylesheet.css')">Style Black</button>
+                        <button onclick="swapStyleSheet('stylesheet2.css')">Style Yellow</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

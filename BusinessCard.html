@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Card</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div ng-app = "">
+
+            <div class="flex-item2">Business Card
+                <form id="businessCard">
+                    <p>Name：<input type ="text" ng-model="name" placeholder="Enter Name"></p>
+
+                    <p>Email：<input type = "text" ng-model = "email" placeholder="Enter Email"></p>
+
+
+
+                </form>
+            </div>
+
+             <div>
+                 <p>{{name}}</p>
+                 <p>{{email}}</p>
+             </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.name = "Donghan";
+            $scope.email = "fan.d@husky.neu.edu";
+        });
+    </script>
+</div>
+</body>
+</html>

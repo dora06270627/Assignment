@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Me</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link id ="pagestyle" rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script data-require="angular.js@1.2.5" data-semver="1.2.5" src="http://code.angularjs.org/1.2.4/angular.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+
+<body class="bgAbout" onload ="setStyleSheet()">
+
+<script src="main.js"></script>
+
+<div id="wrapper">
+    <div id = "main">
+        <nav id = "nav-wrap">
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="https://www.linkedin.com/in/donghan-dora-fan-601528112" target="_blank">Linkedin</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <h3>ABOUT ME</h3>
+
+
+        <div class ="flex-SearchBox">
+
+        <div ng-app = "s">
+
+
+            <div class="search-item1" ng-controller="s">
+                <input  type="text" placeholder="Search" ng-model="search.text">
+
+                <ul>
+                    <!-- filter code -->
+                    <div ng-repeat="item in data | filter:search.text"
+                         ng-bind-html="item.text | highlight:search.text">
+                    </div>
+                </ul>
+            </div>
+
+            <script>
+               angular.module('s', [])
+                .controller('s', function($scope) {
+                    $scope.data = [
+                        { text: "I am a professional Masters student in the Information System program at Northeastern University</br>" +
+                        " and seeking for a position of software engineering .</br>" +
+                        "</br>TECHNICAL SKILLS:</br>" +
+                        "Programming Language: Java, C# </br>" +
+                        "Data Engineering: SQL Server, MySQL, Mongo DB</br>" +
+                        "Web Technologies: HTML5, CSS, JavaScript, JQuery, Bootstrap, Node.JS, AngularJS</br>" +
+                        "Operating Systems: Windows, Mac OS X, Linux" }
+                    ]
+                })
+                        .filter('highlight', function($sce) {
+                            return function(text, phrase) {
+                                if (phrase) text = text.replace(new RegExp('('+phrase+')', 'gi'),
+                                        '<span class="highlighted">$1</span>')
+
+                                return $sce.trustAsHtml(text)
+                            }
+                        })
+
+            </script>
+        </div>
+    </div>
+
+
+
+    <div class="flex-box1">
+        <div class="flex-item1">EDUCATION
+            <ul>
+                <li>Northeastern University</br>
+                    Master’s Degree, Information Systems</br>
+                    2016 – 2017
+                </li>
+                <li>University of Shanghai for Science and Technology</br>
+                    Bachelor of Engineering (B.E.), Electronic Information Science and Technology</br>
+                    2008 – 2012
+                </li>
+            </ul>
+        </div>
+        <div class="flex-item1">MY EXPERIENCE
+            <ul>
+                <li>Project Assistant</br>
+                    Wonders Information Co., Ltd.</br>
+                    January 2015 – August 2015 (8 months)</br>
+                    Shanghai, China</br>
+                    <ul>
+                        <li>Engaged in Project, Creation of Cardiac Failure Collaboration Management Platform
+                            Based on Disease Management Model and Intelligent Healthcare Solution</li>
+                        <li>Analyzed customer requirements and made written specifications to develop
+                            the basic information and structure of the platform</li>
+                        <li>Assisted in the preliminary R&D for the integrated technology of
+                            health record and PHR theoretical model of heart failure.</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<footer>
+    <div id="footer">
+        <div class = "container">
+            <div id="copyright">
+                <ul>
+                    <li>&copy;Donghan Fan</li>
+                    <li>Contact information: <a href="mailto:fan.d@husky.neu.edu">fan.d@husky.neu.edu</a></li>
+                    <li><button onclick="swapStyleSheet('stylesheet.css')">Style Black</button>
+                        <button onclick="swapStyleSheet('stylesheet2.css')">Style Yellow</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
